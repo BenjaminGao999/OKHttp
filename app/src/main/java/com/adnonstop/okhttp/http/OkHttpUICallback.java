@@ -33,7 +33,7 @@ public class OkHttpUICallback {
          */
         private static Type getSuperclassTypeParameter(Class<?> subclass) {
             //genericSuperclass 翻译为中文就是“泛型类”
-            Type superclass = subclass.getGenericSuperclass();//获取当前类的类型；举个例子当前类的类型若是ResultCallBack<>不带泛型或泛型参数为空，则superclasss是Class类型的；ResuleCallBack<TestData> 则为参数化类型：parameterizedType。
+            Type superclass = subclass.getGenericSuperclass();//获取当前类的Type类型；举个例子当前类的类型若是ResultCallBack<>不带泛型或泛型参数为空，则superclasss是Class类型的；ResuleCallBack<TestData> 则为参数化类型：parameterizedType。
             if (superclass instanceof Class) {//为啥呢？啥意思？通过完整的类而非clazz获取到类的信息；所以当为clazz时报错。
                 Log.i("type>>>", "getSuperclassTypeParameter: superclass instanceof Class");
                 throw new RuntimeException("Miss type parameter");//参数类型缺失.直接抛出异常！

@@ -1,0 +1,6 @@
+封装okHttp要注意内容：
+    一 okHttp封装工具类是可扩展的，依据具体的业务需求自行添加方法
+        一般来所，json分为对象和数组，fastJson解析json对象和数组采用不同的方法，如果需要解析json数组请自行添加方法；
+    二 fastJson解析json对象需要依据Type，需要在回调接口里传入Type
+        Type是啥？ 有关链接 http://blog.csdn.net/u012422440/article/details/48948921
+    三 关于上传下载的监听如何实现，现在先不讨论
